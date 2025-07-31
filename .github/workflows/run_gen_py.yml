@@ -4,7 +4,7 @@ on:
   workflow_dispatch:  # 仅保留手动触发方式
     
 jobs:
-  clear-repo:
+  run-gen-py:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # 允许推送更改
