@@ -61,9 +61,6 @@ if __name__ == "__main__":
     start_time = time()
     output_file = "sha256.txt"
     
-    # 确保文件不存在或为空
-    if os.path.exists(output_file):
-        os.remove(output_file)
     with open("length.txt", "r") as f:
         lines = f.readlines()
         length = int(lines[0].strip())
