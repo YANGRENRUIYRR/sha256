@@ -66,14 +66,11 @@ if __name__ == "__main__":
         os.remove(output_file)
     with open("length.txt", "r") as f:
         lines = f.readlines()
-        start_length = int(lines[0].strip())
-        end_length = int(lines[1].strip())
+        length = int(lines[0].strip())
     charset = string.digits + string.ascii_letters
     batch_size = 1000000  # 根据内存调整
     
-    # 按顺序处理每个长度
-    for length in range(start_length, end_length + 1):
-        process_length(length, charset, batch_size, output_file)
+    process_length(length, charset, batch_size, output_file)
     
     total_time = time() - start_time
     print(f"\n全部完成！总耗时: {total_time:.2f}秒")
