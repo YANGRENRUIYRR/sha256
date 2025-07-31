@@ -1,4 +1,4 @@
-name: Clear Repository
+name: Run Gen.py
 
 on:
   workflow_dispatch:  # 仅保留手动触发方式
